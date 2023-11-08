@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hostnet
+spec:
+  selector:
+    matchLabels:
+      app: hostnet
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hostnet
+    spec:
+      hostNetwork: true
+      containers:
+      - name: net-debug
+        image: docker.io/l7mp/net-debug
