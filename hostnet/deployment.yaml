@@ -15,4 +15,4 @@ spec:
       hostNetwork: true
       containers:
       - name: net-debug
-        image: docker.io/l7mp/net-debug
+        image: docker.io/retvari/net-debug
